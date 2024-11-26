@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #f3f4f7, #e4e5e9);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .loading {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation: loadingAnimation 0.5s infinite linear;
+        border: 10px solid #8e7878;
+        border-top: 10px solid rgb(161, 195, 24);
+      }
+      @keyframes loadingAnimation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 1200px;
+      }
+      .container div {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        cursor: pointer;
+        width: calc(100% / 3 - 40px);
+      }
+      .container div h2,
+      .container div h3,
+      .container div h4 {
+        margin: 10px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .container div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      @media (max-width: 768px) {
+        .container div {
+          width: calc(100% / 2 - 20px);
+        }
+      }
+      @media (max-width: 480px) {
+        .container div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div class="container"></div>
+    <script src="./js/user.js"></script>
+  </body>
+</html>

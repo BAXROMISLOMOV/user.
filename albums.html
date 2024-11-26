@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* General Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(120deg, #d4fc79, #96e6a1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      /* Loading Spinner */
+      .loading {
+        width: 70px;
+        height: 70px;
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        border-top: 8px solid #4caf50;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /* Container Styling */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        padding: 20px;
+      }
+      /* Card Styling */
+      .container div {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        width: 280px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .container div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      .container div h2 {
+        color: #4caf50;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .container div h3 {
+        color: #333333;
+        font-size: 1.2em;
+        margin-bottom: 8px;
+      }
+      .container div h4 {
+        color: #666666;
+        font-size: 1em;
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container div {
+          width: calc(100% / 2 - 20px);
+        }
+      }
+      @media (max-width: 480px) {
+        .container div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div class="container"></div>
+    <script src="./js/albums.js"></script>
+  </body>
+</html>
