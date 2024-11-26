@@ -7,3 +7,6 @@ links.forEach((link) => {
     window.location.href = target;
   });
 });
+loading.style.display = "block";
+
+if (loading) loading.style.display = "none";
